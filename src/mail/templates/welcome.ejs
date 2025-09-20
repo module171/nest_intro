@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .welcome-message {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .user-info {
+            background-color: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .info-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #495057;
+            min-width: 100px;
+        }
+        .info-value {
+            color: #6c757d;
+            margin-left: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .social-links {
+            margin: 15px 0;
+        }
+        .social-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 20px 0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 0;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            .header {
+                padding: 20px 15px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Chào mừng bạn!</h1>
+        </div>
+        
+        <div class="content">
+            <div class="welcome-message">
+                Xin chào <strong><%= name %></strong>,<br>
+                Chúng tôi rất vui được chào đón bạn đến với ứng dụng của chúng tôi!
+            </div>
+            
+            <div class="user-info">
+                <div class="info-item">
+                    <span class="info-label">📧 Email:</span>
+                    <span class="info-value"><%= email %></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">👤 Tên:</span>
+                    <span class="info-value"><%= name %></span>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="<%= loginUrl %>" class="cta-button">
+                    🚀 Đăng nhập ngay
+                </a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p style="text-align: center; color: #6c757d; font-size: 16px;">
+                Cảm ơn bạn đã tin tưởng và sử dụng ứng dụng của chúng tôi. 
+                Chúng tôi cam kết mang đến trải nghiệm tốt nhất cho bạn!
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Trân trọng,</strong><br>Đội ngũ Onboarding</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+            <p style="font-size: 12px; color: #bdc3c7; margin-top: 15px;">
+                © 2024 Onboarding Team. Tất cả quyền được bảo lưu.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Ignore tất cả files
+*
+**/*
+src/**/*
+test/**/*
